@@ -31,5 +31,4 @@ orchestration/.tmp_dagster_home/
 .DS_Store
 services/feature_server/area_features.json
 infra/tofu/.terraform/
-infra/tofu/.terraform.lock.hcl
 *.zip
