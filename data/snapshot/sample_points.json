@@ -1,0 +1,562 @@
+[
+  {
+    "lga_code": "20110",
+    "lga_name": "Alpine",
+    "latitude": -36.83315,
+    "longitude": 146.98445,
+    "area_sqkm": 4788.157
+  },
+  {
+    "lga_code": "20260",
+    "lga_name": "Ararat",
+    "latitude": -37.46845,
+    "longitude": 142.80334,
+    "area_sqkm": 4211.1172
+  },
+  {
+    "lga_code": "20570",
+    "lga_name": "Ballarat",
+    "latitude": -37.50135,
+    "longitude": 143.77122,
+    "area_sqkm": 739.0321
+  },
+  {
+    "lga_code": "20660",
+    "lga_name": "Banyule",
+    "latitude": -37.72695,
+    "longitude": 145.09308,
+    "area_sqkm": 62.5402
+  },
+  {
+    "lga_code": "20740",
+    "lga_name": "Bass Coast",
+    "latitude": -38.4878,
+    "longitude": 145.55522,
+    "area_sqkm": 865.8094
+  },
+  {
+    "lga_code": "20830",
+    "lga_name": "Baw Baw",
+    "latitude": -37.9709,
+    "longitude": 146.10918,
+    "area_sqkm": 4027.6287
+  },
+  {
+    "lga_code": "20910",
+    "lga_name": "Bayside (Vic.)",
+    "latitude": -37.94695,
+    "longitude": 145.02013,
+    "area_sqkm": 37.2111
+  },
+  {
+    "lga_code": "21010",
+    "lga_name": "Benalla",
+    "latitude": -36.5936,
+    "longitude": 146.03125,
+    "area_sqkm": 2352.6398
+  },
+  {
+    "lga_code": "21110",
+    "lga_name": "Boroondara",
+    "latitude": -37.83775,
+    "longitude": 145.06797,
+    "area_sqkm": 60.1776
+  },
+  {
+    "lga_code": "21180",
+    "lga_name": "Brimbank",
+    "latitude": -37.7291,
+    "longitude": 144.81609,
+    "area_sqkm": 123.3991
+  },
+  {
+    "lga_code": "21270",
+    "lga_name": "Buloke",
+    "latitude": -35.88755,
+    "longitude": 142.9887,
+    "area_sqkm": 7998.247
+  },
+  {
+    "lga_code": "21370",
+    "lga_name": "Campaspe",
+    "latitude": -36.30605,
+    "longitude": 144.71598,
+    "area_sqkm": 4519.073
+  },
+  {
+    "lga_code": "21450",
+    "lga_name": "Cardinia",
+    "latitude": -38.08985,
+    "longitude": 145.56783,
+    "area_sqkm": 1282.5671
+  },
+  {
+    "lga_code": "21610",
+    "lga_name": "Casey",
+    "latitude": -38.0798,
+    "longitude": 145.31032,
+    "area_sqkm": 409.4287
+  },
+  {
+    "lga_code": "21670",
+    "lga_name": "Central Goldfields",
+    "latitude": -36.97485,
+    "longitude": 143.7057,
+    "area_sqkm": 1532.7843
+  },
+  {
+    "lga_code": "21750",
+    "lga_name": "Colac Otway",
+    "latitude": -38.4074,
+    "longitude": 143.56366,
+    "area_sqkm": 3437.47
+  },
+  {
+    "lga_code": "21830",
+    "lga_name": "Corangamite",
+    "latitude": -38.21295,
+    "longitude": 143.12841,
+    "area_sqkm": 4407.492
+  },
+  {
+    "lga_code": "21890",
+    "lga_name": "Darebin",
+    "latitude": -37.7502,
+    "longitude": 145.00729,
+    "area_sqkm": 53.4712
+  },
+  {
+    "lga_code": "22110",
+    "lga_name": "East Gippsland",
+    "latitude": -37.33545,
+    "longitude": 148.49951,
+    "area_sqkm": 20939.5016
+  },
+  {
+    "lga_code": "22170",
+    "lga_name": "Frankston",
+    "latitude": -38.1116,
+    "longitude": 145.1773,
+    "area_sqkm": 129.5981
+  },
+  {
+    "lga_code": "22250",
+    "lga_name": "Gannawarra",
+    "latitude": -35.72905,
+    "longitude": 143.80244,
+    "area_sqkm": 3737.5979
+  },
+  {
+    "lga_code": "22310",
+    "lga_name": "Glen Eira",
+    "latitude": -37.8935,
+    "longitude": 145.04047,
+    "area_sqkm": 38.6908
+  },
+  {
+    "lga_code": "22410",
+    "lga_name": "Glenelg",
+    "latitude": -37.88945,
+    "longitude": 141.34994,
+    "area_sqkm": 6218.7884
+  },
+  {
+    "lga_code": "22490",
+    "lga_name": "Golden Plains",
+    "latitude": -37.84665,
+    "longitude": 143.83619,
+    "area_sqkm": 2703.3899
+  },
+  {
+    "lga_code": "22620",
+    "lga_name": "Greater Bendigo",
+    "latitude": -36.7093,
+    "longitude": 144.29142,
+    "area_sqkm": 2999.9717
+  },
+  {
+    "lga_code": "22670",
+    "lga_name": "Greater Dandenong",
+    "latitude": -38.0022,
+    "longitude": 145.18999,
+    "area_sqkm": 129.5466
+  },
+  {
+    "lga_code": "22750",
+    "lga_name": "Greater Geelong",
+    "latitude": -38.0555,
+    "longitude": 144.38533,
+    "area_sqkm": 1247.9872
+  },
+  {
+    "lga_code": "22830",
+    "lga_name": "Greater Shepparton",
+    "latitude": -36.4342,
+    "longitude": 145.37868,
+    "area_sqkm": 2421.9092
+  },
+  {
+    "lga_code": "22910",
+    "lga_name": "Hepburn",
+    "latitude": -37.30725,
+    "longitude": 143.99658,
+    "area_sqkm": 1472.9843
+  },
+  {
+    "lga_code": "22980",
+    "lga_name": "Hindmarsh",
+    "latitude": -36.098,
+    "longitude": 141.704,
+    "area_sqkm": 7524.1823
+  },
+  {
+    "lga_code": "23110",
+    "lga_name": "Hobsons Bay",
+    "latitude": -37.85575,
+    "longitude": 144.83524,
+    "area_sqkm": 64.2405
+  },
+  {
+    "lga_code": "23190",
+    "lga_name": "Horsham",
+    "latitude": -36.8246,
+    "longitude": 142.10847,
+    "area_sqkm": 4266.769
+  },
+  {
+    "lga_code": "23270",
+    "lga_name": "Hume",
+    "latitude": -37.59045,
+    "longitude": 144.81968,
+    "area_sqkm": 503.8488
+  },
+  {
+    "lga_code": "23350",
+    "lga_name": "Indigo",
+    "latitude": -36.2112,
+    "longitude": 146.66407,
+    "area_sqkm": 2040.471
+  },
+  {
+    "lga_code": "23430",
+    "lga_name": "Kingston (Vic.)",
+    "latitude": -38.0041,
+    "longitude": 145.10678,
+    "area_sqkm": 91.3676
+  },
+  {
+    "lga_code": "23670",
+    "lga_name": "Knox",
+    "latitude": -37.89925,
+    "longitude": 145.26603,
+    "area_sqkm": 113.9114
+  },
+  {
+    "lga_code": "23810",
+    "lga_name": "Latrobe (Vic.)",
+    "latitude": -38.2494,
+    "longitude": 146.46078,
+    "area_sqkm": 1425.613
+  },
+  {
+    "lga_code": "23940",
+    "lga_name": "Loddon",
+    "latitude": -36.41105,
+    "longitude": 143.89019,
+    "area_sqkm": 6696.4447
+  },
+  {
+    "lga_code": "24130",
+    "lga_name": "Macedon Ranges",
+    "latitude": -37.3398,
+    "longitude": 144.64536,
+    "area_sqkm": 1748.284
+  },
+  {
+    "lga_code": "24210",
+    "lga_name": "Manningham",
+    "latitude": -37.75055,
+    "longitude": 145.19401,
+    "area_sqkm": 113.3479
+  },
+  {
+    "lga_code": "24250",
+    "lga_name": "Mansfield",
+    "latitude": -37.2408,
+    "longitude": 146.31374,
+    "area_sqkm": 3843.8535
+  },
+  {
+    "lga_code": "24330",
+    "lga_name": "Maribyrnong",
+    "latitude": -37.78195,
+    "longitude": 144.87308,
+    "area_sqkm": 31.2258
+  },
+  {
+    "lga_code": "24410",
+    "lga_name": "Maroondah",
+    "latitude": -37.80455,
+    "longitude": 145.26091,
+    "area_sqkm": 61.4097
+  },
+  {
+    "lga_code": "24600",
+    "lga_name": "Melbourne",
+    "latitude": -37.8189,
+    "longitude": 144.94721,
+    "area_sqkm": 37.5452
+  },
+  {
+    "lga_code": "24650",
+    "lga_name": "Melton",
+    "latitude": -37.69325,
+    "longitude": 144.63576,
+    "area_sqkm": 527.5374
+  },
+  {
+    "lga_code": "24780",
+    "lga_name": "Mildura",
+    "latitude": -34.87405,
+    "longitude": 141.80073,
+    "area_sqkm": 22081.9206
+  },
+  {
+    "lga_code": "24850",
+    "lga_name": "Mitchell",
+    "latitude": -37.1683,
+    "longitude": 144.97515,
+    "area_sqkm": 2862.0837
+  },
+  {
+    "lga_code": "24900",
+    "lga_name": "Moira",
+    "latitude": -36.0501,
+    "longitude": 145.58073,
+    "area_sqkm": 4045.9201
+  },
+  {
+    "lga_code": "24970",
+    "lga_name": "Monash",
+    "latitude": -37.88665,
+    "longitude": 145.14078,
+    "area_sqkm": 81.4829
+  },
+  {
+    "lga_code": "25060",
+    "lga_name": "Moonee Valley",
+    "latitude": -37.74945,
+    "longitude": 144.88773,
+    "area_sqkm": 43.1384
+  },
+  {
+    "lga_code": "25150",
+    "lga_name": "Moorabool",
+    "latitude": -37.62635,
+    "longitude": 144.2123,
+    "area_sqkm": 2110.5504
+  },
+  {
+    "lga_code": "25250",
+    "lga_name": "Moreland",
+    "latitude": -37.75215,
+    "longitude": 144.95816,
+    "area_sqkm": 50.9522
+  },
+  {
+    "lga_code": "25340",
+    "lga_name": "Mornington Peninsula",
+    "latitude": -38.3361,
+    "longitude": 145.0731,
+    "area_sqkm": 723.992
+  },
+  {
+    "lga_code": "25430",
+    "lga_name": "Mount Alexander",
+    "latitude": -37.0685,
+    "longitude": 144.27441,
+    "area_sqkm": 1529.6183
+  },
+  {
+    "lga_code": "25490",
+    "lga_name": "Moyne",
+    "latitude": -38.1844,
+    "longitude": 142.37116,
+    "area_sqkm": 5481.686
+  },
+  {
+    "lga_code": "25620",
+    "lga_name": "Murrindindi",
+    "latitude": -37.2865,
+    "longitude": 145.60741,
+    "area_sqkm": 3879.7505
+  },
+  {
+    "lga_code": "25710",
+    "lga_name": "Nillumbik",
+    "latitude": -37.5951,
+    "longitude": 145.25009,
+    "area_sqkm": 432.3373
+  },
+  {
+    "lga_code": "25810",
+    "lga_name": "Northern Grampians",
+    "latitude": -36.8534,
+    "longitude": 143.0215,
+    "area_sqkm": 5729.8765
+  },
+  {
+    "lga_code": "25900",
+    "lga_name": "Port Phillip",
+    "latitude": -37.87595,
+    "longitude": 144.99035,
+    "area_sqkm": 20.6141
+  },
+  {
+    "lga_code": "25990",
+    "lga_name": "Pyrenees",
+    "latitude": -37.3388,
+    "longitude": 143.42147,
+    "area_sqkm": 3434.5687
+  },
+  {
+    "lga_code": "26080",
+    "lga_name": "Queenscliffe",
+    "latitude": -38.27335,
+    "longitude": 144.62282,
+    "area_sqkm": 8.6166
+  },
+  {
+    "lga_code": "26170",
+    "lga_name": "South Gippsland",
+    "latitude": -38.69895,
+    "longitude": 146.01374,
+    "area_sqkm": 3296.3307
+  },
+  {
+    "lga_code": "26260",
+    "lga_name": "Southern Grampians",
+    "latitude": -37.5256,
+    "longitude": 141.95697,
+    "area_sqkm": 6654.0186
+  },
+  {
+    "lga_code": "26350",
+    "lga_name": "Stonnington",
+    "latitude": -37.8614,
+    "longitude": 145.03239,
+    "area_sqkm": 25.651
+  },
+  {
+    "lga_code": "26430",
+    "lga_name": "Strathbogie",
+    "latitude": -36.71805,
+    "longitude": 145.37416,
+    "area_sqkm": 3303.2568
+  },
+  {
+    "lga_code": "26490",
+    "lga_name": "Surf Coast",
+    "latitude": -38.33175,
+    "longitude": 144.09922,
+    "area_sqkm": 1552.944
+  },
+  {
+    "lga_code": "26610",
+    "lga_name": "Swan Hill",
+    "latitude": -35.09935,
+    "longitude": 143.02398,
+    "area_sqkm": 6115.5373
+  },
+  {
+    "lga_code": "26670",
+    "lga_name": "Towong",
+    "latitude": -36.3757,
+    "longitude": 147.60235,
+    "area_sqkm": 6675.1725
+  },
+  {
+    "lga_code": "26700",
+    "lga_name": "Wangaratta",
+    "latitude": -36.61545,
+    "longitude": 146.42809,
+    "area_sqkm": 3645.1096
+  },
+  {
+    "lga_code": "26730",
+    "lga_name": "Warrnambool",
+    "latitude": -38.3814,
+    "longitude": 142.50378,
+    "area_sqkm": 120.9487
+  },
+  {
+    "lga_code": "26810",
+    "lga_name": "Wellington",
+    "latitude": -37.89885,
+    "longitude": 146.88137,
+    "area_sqkm": 10817.4231
+  },
+  {
+    "lga_code": "26890",
+    "lga_name": "West Wimmera",
+    "latitude": -36.60495,
+    "longitude": 141.39805,
+    "area_sqkm": 9108.6794
+  },
+  {
+    "lga_code": "26980",
+    "lga_name": "Whitehorse",
+    "latitude": -37.83255,
+    "longitude": 145.15369,
+    "area_sqkm": 64.2801
+  },
+  {
+    "lga_code": "27070",
+    "lga_name": "Whittlesea",
+    "latitude": -37.5577,
+    "longitude": 145.05825,
+    "area_sqkm": 489.6938
+  },
+  {
+    "lga_code": "27170",
+    "lga_name": "Wodonga",
+    "latitude": -36.14635,
+    "longitude": 146.91471,
+    "area_sqkm": 433.0021
+  },
+  {
+    "lga_code": "27260",
+    "lga_name": "Wyndham",
+    "latitude": -37.89235,
+    "longitude": 144.62883,
+    "area_sqkm": 542.0943
+  },
+  {
+    "lga_code": "27350",
+    "lga_name": "Yarra",
+    "latitude": -37.8057,
+    "longitude": 144.98879,
+    "area_sqkm": 19.5421
+  },
+  {
+    "lga_code": "27450",
+    "lga_name": "Yarra Ranges",
+    "latitude": -37.75055,
+    "longitude": 145.72425,
+    "area_sqkm": 2468.2052
+  },
+  {
+    "lga_code": "27630",
+    "lga_name": "Yarriambiack",
+    "latitude": -36.0471,
+    "longitude": 142.38487,
+    "area_sqkm": 7325.797
+  },
+  {
+    "lga_code": "29399",
+    "lga_name": "Unincorporated Vic",
+    "latitude": -38.3323,
+    "longitude": 145.38151,
+    "area_sqkm": 283.1903
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "history_start": "2016-01-01",
+  "history_end": "2026-10-30",
+  "forecast_start": "2026-10-31",
+  "forecast_end": "2026-11-14",
+  "lga_sample_points": 80,
+  "history_failures": [],
+  "forecast_failures": [],
+  "air_failures": [],
+  "sample_point": "Interior representative point of the largest polygon of each LGA. A geometric centroid can fall in the bay for coastal councils.",
+  "pm25_daily_standard_ugm3": 25.0,
+  "ozone_8h_standard_ugm3": 130.0
+}

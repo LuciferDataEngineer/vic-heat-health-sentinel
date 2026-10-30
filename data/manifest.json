@@ -1,0 +1,150 @@
+{
+  "project": "vic-heat-health-sentinel",
+  "access_date": "2026-10-31",
+  "access_time_melbourne": "2026-10-31T09:24:40+1100",
+  "notes": {
+    "history_start": "2016-01-01",
+    "history_end": "2026-10-30",
+    "forecast_start": "2026-10-31",
+    "forecast_end": "2026-11-14",
+    "lga_sample_points": 80,
+    "history_failures": [],
+    "forecast_failures": [],
+    "air_failures": [],
+    "sample_point": "Interior representative point of the largest polygon of each LGA. A geometric centroid can fall in the bay for coastal councils.",
+    "pm25_daily_standard_ugm3": 25.0,
+    "ozone_8h_standard_ugm3": 130.0
+  },
+  "files": [
+    {
+      "path": "data/snapshot/lga_boundaries.geojson",
+      "rows": 80,
+      "bytes": 122223,
+      "sha256": "1f8701567d669897779b11f61163328f04f7a3b0060b17996e25d6ffde64a403"
+    },
+    {
+      "path": "data/snapshot/sample_points.json",
+      "rows": 80,
+      "bytes": 11575,
+      "sha256": "8144681ad5cb4fa6134fa6276f10efa3904abca43c57bbbde8bae40c8692b45e"
+    },
+    {
+      "path": "data/snapshot/census_lga.parquet",
+      "rows": 82,
+      "bytes": 10645,
+      "sha256": "7aa9ddbca1c56194af9b224244e37906f6c2fc3ee52edc80e60545108f5a5314"
+    },
+    {
+      "path": "data/snapshot/history_daily.parquet",
+      "rows": 316480,
+      "bytes": 1069775,
+      "sha256": "050bbfcc4d3778f3998ca56769a0d07c3da13920ccec8c1e43eaae170364d243"
+    },
+    {
+      "path": "data/snapshot/forecast_daily.parquet",
+      "rows": 1200,
+      "bytes": 10599,
+      "sha256": "d1d5a5fea2ef7c0d4815f494b58f116d5c1844956a81056ce02145188d05e0f4"
+    },
+    {
+      "path": "data/snapshot/air_quality_daily.parquet",
+      "rows": 400,
+      "bytes": 5557,
+      "sha256": "6a7fe2aa1d9e579a1477de724f2597a89329eb591bd702005c34a22d2a540af6"
+    },
+    {
+      "path": "data/snapshot/history_meta.json",
+      "rows": 1,
+      "bytes": 67,
+      "sha256": "d18302ec6fd4f0afe94209b9cdd9347842c5bfd1ea50d95de2f89fa0e60b6150"
+    },
+    {
+      "path": "data/snapshot/run_notes.json",
+      "rows": 1,
+      "bytes": 456,
+      "sha256": "4539ed7887de5edcd8ed7c5b23957b64629a82417fa9a65b8cccbbec98302924"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Open-Meteo forecast API",
+      "publisher": "Open-Meteo",
+      "url": "https://api.open-meteo.com/v1/forecast",
+      "licence": "CC BY 4.0",
+      "coverage": "Daily temperature at one interior point in each Victorian LGA, 2026-10-31 to 2026-11-14",
+      "access_date": "2026-10-31",
+      "free": true,
+      "notes": "No API key. Upstream weather models via Open-Meteo."
+    },
+    {
+      "name": "Open-Meteo historical weather API (ERA5)",
+      "publisher": "Open-Meteo, Copernicus Climate Change Service (ERA5)",
+      "url": "https://archive-api.open-meteo.com/v1/archive",
+      "licence": "CC BY 4.0",
+      "coverage": "Daily temperature, 2016-01-01 to 2026-10-30, one interior point per Victorian LGA",
+      "access_date": "2026-10-31",
+      "free": true,
+      "notes": "ERA5 reanalysis lags the present by several days, so the archive end date is the last day the API returned."
+    },
+    {
+      "name": "Open-Meteo air quality API (CAMS)",
+      "publisher": "Open-Meteo, Copernicus Atmosphere Monitoring Service",
+      "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
+      "licence": "CC BY 4.0",
+      "coverage": "Hourly PM2.5 and ozone, aggregated to local days, next 5 days, one point per Victorian LGA",
+      "access_date": "2026-10-31",
+      "free": true,
+      "notes": "Smoke is not a separate field. Fine-particle pollution (PM2.5) is the smoke proxy. EPA Victoria's keyed API is not used."
+    },
+    {
+      "name": "ABS ASGS 2021 Local Government Areas",
+      "publisher": "Australian Bureau of Statistics",
+      "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/LGA/MapServer",
+      "licence": "CC BY 4.0",
+      "coverage": "Victorian LGA boundaries, generalised for the map, GDA2020 via Web Mercator query returned in WGS84",
+      "access_date": "2026-10-31",
+      "free": true,
+      "notes": "Geometry simplified with maxAllowableOffset 0.008 degrees for the dashboard."
+    },
+    {
+      "name": "ABS Census 2021 General Community Profile G01",
+      "publisher": "Australian Bureau of Statistics",
+      "url": "https://geo.abs.gov.au/arcgis/rest/services/Hosted/ABS_2021_Census_G01_LGA/FeatureServer",
+      "licence": "CC BY 4.0",
+      "coverage": "Usual-resident population, children aged 0-4, and ages 65-74, 75-84 and 85+ by Victorian LGA",
+      "access_date": "2026-10-31",
+      "free": true,
+      "notes": "Small random adjustments are applied by the ABS to protect privacy."
+    },
+    {
+      "name": "ABS Data by Region, income, 2021",
+      "publisher": "Australian Bureau of Statistics",
+      "url": "https://geo.abs.gov.au/arcgis/rest/services/Hosted/ABS_Income_including_government_allowances_by_2021_LGA/FeatureServer",
+      "licence": "CC BY 4.0",
+      "coverage": "Median equivalised household income and the share of households under $500 a week, Victorian LGAs",
+      "access_date": "2026-10-31",
+      "free": true,
+      "notes": "Equivalised total household income, Census 2021."
+    },
+    {
+      "name": "ABS Data by Region, family and community, 2021",
+      "publisher": "Australian Bureau of Statistics",
+      "url": "https://geo.abs.gov.au/arcgis/rest/services/Hosted/ABS_Family_and_community_by_2021_LGA_Nov_2023/FeatureServer",
+      "licence": "CC BY 4.0",
+      "coverage": "Lone-person households and total households by Victorian LGA",
+      "access_date": "2026-10-31",
+      "free": true,
+      "notes": "Table field hhtype_22021 is lone-person households."
+    },
+    {
+      "name": "Victorian heat-health temperature thresholds",
+      "publisher": "Victorian Department of Health",
+      "url": "https://www.health.vic.gov.au/environmental-health/heat-health-warning",
+      "licence": "Public government page, cited; not a bulk download",
+      "coverage": "District thresholds 30, 32 and 34\u00b0C and the council-to-district list",
+      "access_date": "2026-10-31",
+      "free": true,
+      "notes": "Used only as the published temperature cut-offs. No health-outcome microdata."
+    }
+  ]
+}
