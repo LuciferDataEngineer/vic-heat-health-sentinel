@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vhhs"
+version = "0.1.0"
+description = "Victorian heat-health early warning: where the next fortnight is dangerous, and who lives there."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+    "duckdb>=1.1",
+    "pyarrow>=16",
+    "pandas>=2.2",
+    "shapely>=2.0",
+    "requests>=2.32",
+    "scikit-learn>=1.5",
+    "mlflow>=2.16",
+    "evidently>=0.4.40,<0.5",
+    "deltalake>=0.25",
+    "dbt-core>=1.8,<1.10",
+    "dbt-duckdb>=1.9,<1.10",
+    "dagster>=1.8,<1.12",
+    "feast>=0.40,<0.50",
+    "jsonschema>=4.20",
+    "kafka-python>=2.0",
+    "psutil>=6",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+flink = ["apache-flink==2.2.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

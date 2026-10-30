@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: ruff check src tests
+      - name: Warehouse, model, features and page
+        run: |
+          python -m vhhs.pipeline
+          python -m vhhs.lake
+          python -m vhhs.model
+          python -m vhhs.drift
+          python -m vhhs.features_build
+          mkdir -p data/warehouse
+          dbt build --project-dir dbt_project --profiles-dir dbt_project
+          python -m vhhs.dashboard
+        env:
+          VHHS_ROOT: ${{ github.workspace }}
+          VHHS_DUCKDB: ${{ github.workspace }}/data/warehouse/vhhs.duckdb
+          MLFLOW_DISABLE_AGENT_HINT: "1"
+      - name: Tests
+        run: pytest
+      - name: Dagster asset graph loads
+        run: python -c "from vhhs.definitions import defs; assert len(list(defs.assets)) >= 6"
+
+  tofu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install OpenTofu
+        run: |
+          curl -fsSL -o /tmp/tofu.zip https://github.com/opentofu/opentofu/releases/download/v1.8.8/tofu_1.8.8_linux_amd64.zip
+          unzip -q -o /tmp/tofu.zip -d /tmp/tofu-bin
+          sudo mv /tmp/tofu-bin/tofu /usr/local/bin/tofu
+          tofu version
+      - name: Validate the broker definition
+        working-directory: infra/tofu
+        run: |
+          tofu init -backend=false
+          tofu validate

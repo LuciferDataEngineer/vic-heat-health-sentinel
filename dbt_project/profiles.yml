@@ -1,0 +1,8 @@
+vhhs:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('VHHS_DUCKDB') }}"
+      schema: main
+      threads: 2

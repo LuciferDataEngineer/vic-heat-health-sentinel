@@ -1,0 +1,38 @@
+name: Platform
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  kind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install and build the feature file
+        run: |
+          pip install -e .
+          python -m vhhs.pipeline
+          cp data/serving/area_features.json services/feature_server/area_features.json
+          docker build -t vhhs-feature-server:local services/feature_server
+      - name: Start a kind cluster
+        uses: helm/kind-action@v1.12.0
+        with:
+          cluster_name: vhhs
+      - name: Serve area features and smoke-test them
+        run: |
+          kind load docker-image vhhs-feature-server:local --name vhhs
+          kubectl apply -f infra/k8s/feature-server.yaml
+          kubectl rollout status deployment/feature-server --timeout=180s
+          kubectl port-forward svc/feature-server 8080:80 >/tmp/port-forward.log 2>&1 &
+          for _ in 1 2 3 4 5 6 7 8 9 10; do
+            curl -fsS http://127.0.0.1:8080/health && break
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:8080/health
+          curl -fsS http://127.0.0.1:8080/features | python -c "import json,sys; body=json.load(sys.stdin); assert len(body['areas']) >= 70"

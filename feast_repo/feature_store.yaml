@@ -1,0 +1,9 @@
+project: vhhs
+registry: ../data/feast/registry.db
+provider: local
+online_store:
+  type: sqlite
+  path: ../data/feast/online_store.db
+entity_key_serialization_version: 2
+auth:
+  type: no_auth

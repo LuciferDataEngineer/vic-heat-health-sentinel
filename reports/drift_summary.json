@@ -1,0 +1,24 @@
+{
+  "dataset_drift": false,
+  "drifted_columns": 0,
+  "columns_checked": 11,
+  "share_of_columns_drifted": 0.0,
+  "reference": "summer days before November 2022",
+  "current": "summer days from November 2022 onward",
+  "reference_rows": 12000,
+  "current_rows": 12000,
+  "columns": [
+    "lag1_tmean",
+    "lag1_tmax",
+    "lag1_tmin",
+    "lag3_tmean",
+    "lag7_tmean",
+    "doy_sin",
+    "doy_cos",
+    "latitude",
+    "longitude",
+    "t95_train",
+    "threshold_c"
+  ],
+  "tool": "evidently DataDriftPreset"
+}
