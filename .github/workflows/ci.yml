@@ -43,9 +43,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install OpenTofu
         run: |
-          curl -fsSL -o tofu.zip https://github.com/opentofu/opentofu/releases/download/v1.8.8/tofu_1.8.8_linux_amd64.zip
-          unzip -q tofu.zip
-          sudo mv tofu /usr/local/bin/tofu
+          curl -fsSL -o /tmp/tofu.zip https://github.com/opentofu/opentofu/releases/download/v1.8.8/tofu_1.8.8_linux_amd64.zip
+          unzip -q -o /tmp/tofu.zip -d /tmp/tofu-bin
+          sudo mv /tmp/tofu-bin/tofu /usr/local/bin/tofu
           tofu version
       - name: Validate the broker definition
         working-directory: infra/tofu
