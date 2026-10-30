@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_lga_priority
+    description: One row per Victorian area with a resident population.
+    columns:
+      - name: lga_code
+        tests: [unique, not_null]
+      - name: lga_name
+        tests: [not_null]
+      - name: priority_score
+        tests: [not_null]
+      - name: persons
+        tests: [not_null]
+  - name: mart_top10_priority
+    description: Ten areas to prepare first.
+    columns:
+      - name: lga_code
+        tests: [unique, not_null]

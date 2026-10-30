@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feature-server
+  labels:
+    app: feature-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: feature-server
+  template:
+    metadata:
+      labels:
+        app: feature-server
+    spec:
+      containers:
+        - name: feature-server
+          image: vhhs-feature-server:local
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 1
+            periodSeconds: 2
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: feature-server
+spec:
+  selector:
+    app: feature-server
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080

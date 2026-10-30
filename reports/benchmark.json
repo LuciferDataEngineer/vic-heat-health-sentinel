@@ -1,0 +1,21 @@
+{
+  "events": 317680,
+  "areas": 80,
+  "duckdb": {
+    "engine": "duckdb",
+    "events": 317680,
+    "areas": 80,
+    "rows_out": 317680,
+    "seconds": 0.071,
+    "peak_memory_mb": 247.9
+  },
+  "flink": {
+    "engine": "flink",
+    "events": 317680,
+    "areas": 80,
+    "rows_out": 317680,
+    "seconds": 14.195,
+    "peak_memory_mb": 558.4
+  },
+  "note": "Same three-day trailing mean of daily temperature. DuckDB is one batch query. Flink is a streaming job with event-time watermarks over a bounded snapshot of the same rows. Peak memory is VmHWM for that process, which for Flink includes the JVM."
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/LuciferDataEngineer/vic-heat-health-sentinel/temperature-event",
+  "title": "Temperature event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["lga_code", "event_time", "temp_max_c", "temp_min_c", "temp_mean_c", "source"],
+  "properties": {
+    "lga_code": {"type": "string", "pattern": "^[0-9]{5}$"},
+    "event_time": {"type": "string", "format": "date-time"},
+    "temp_max_c": {"type": "number", "minimum": -20, "maximum": 55},
+    "temp_min_c": {"type": "number", "minimum": -20, "maximum": 55},
+    "temp_mean_c": {"type": "number", "minimum": -20, "maximum": 55},
+    "source": {"type": "string", "enum": ["archive", "forecast"]}
+  }
+}

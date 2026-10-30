@@ -1,0 +1,87 @@
+{
+  "target": "area-day maximum reaches 35C, predicted from prior days only",
+  "split": "train summers Nov 2016-Mar 2022; test summers Nov 2022-Mar 2026",
+  "train_rows": 79280,
+  "test_rows": 48400,
+  "train_positive_rate": 0.05339303733602422,
+  "test_positive_rate": 0.051983471074380165,
+  "model": {
+    "roc_auc": 0.8815285988001261,
+    "average_precision": 0.3040839298808799,
+    "brier": 0.04202249567485602
+  },
+  "baselines": {
+    "climatology": {
+      "roc_auc": 0.7249104813839671,
+      "average_precision": 0.13574385166802352,
+      "brier": 0.04778057244724455
+    },
+    "persistence": {
+      "roc_auc": 0.6262382958116957,
+      "average_precision": 0.12171518920828153,
+      "brier": 0.07367768595041323
+    }
+  },
+  "beats_persistence_on_average_precision": true,
+  "beats_climatology_on_average_precision": true,
+  "permutation_importance": [
+    {
+      "feature": "lag1_tmax",
+      "importance": 0.18231068383886964
+    },
+    {
+      "feature": "t95_train",
+      "importance": 0.03333655044705251
+    },
+    {
+      "feature": "doy_cos",
+      "importance": 0.026753780394529237
+    },
+    {
+      "feature": "lag1_tmin",
+      "importance": 0.02243206021642343
+    },
+    {
+      "feature": "doy_sin",
+      "importance": 0.016920617503325568
+    },
+    {
+      "feature": "lag1_tmean",
+      "importance": 0.009982241387549561
+    },
+    {
+      "feature": "latitude",
+      "importance": 0.008848269860467805
+    },
+    {
+      "feature": "longitude",
+      "importance": 0.0019374885949911436
+    },
+    {
+      "feature": "threshold_c",
+      "importance": 0.0
+    },
+    {
+      "feature": "lag3_tmean",
+      "importance": -0.00045733713687666765
+    },
+    {
+      "feature": "lag7_tmean",
+      "importance": -0.0035591252606939627
+    }
+  ],
+  "first_forecast_date": "2026-10-31",
+  "features": [
+    "lag1_tmean",
+    "lag1_tmax",
+    "lag1_tmin",
+    "lag3_tmean",
+    "lag7_tmean",
+    "doy_sin",
+    "doy_cos",
+    "latitude",
+    "longitude",
+    "t95_train",
+    "threshold_c"
+  ]
+}

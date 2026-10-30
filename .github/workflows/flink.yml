@@ -1,0 +1,30 @@
+name: Flink
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  windows:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install PyFlink
+        run: pip install "apache-flink==2.2.1" duckdb pandas pyarrow
+      - name: Event-time window matches the batch query
+        env:
+          PYTHONPATH: src
+        run: python -m vhhs.flink_job --lga-limit 4 --start 2024-06-01
+      - name: Benchmark the same rows
+        env:
+          PYTHONPATH: src
+        run: python -m vhhs.benchmark --lga-limit 4 --start 2024-06-01

@@ -1,0 +1,27 @@
+[
+  {
+    "table": "bronze/history_daily",
+    "version": 0,
+    "rows": 316480
+  },
+  {
+    "table": "bronze/forecast_daily",
+    "version": 0,
+    "rows": 1200
+  },
+  {
+    "table": "bronze/air_quality_daily",
+    "version": 0,
+    "rows": 400
+  },
+  {
+    "table": "silver/lga_daily",
+    "version": 0,
+    "rows": 317680
+  },
+  {
+    "table": "gold/lga_priority",
+    "version": 0,
+    "rows": 80
+  }
+]
