@@ -1,8 +1,8 @@
 {
   "history_start": "2016-01-01",
   "history_end": "2026-10-30",
-  "forecast_start": "2026-11-06",
-  "forecast_end": "2026-11-21",
+  "forecast_start": "2026-11-07",
+  "forecast_end": "2026-11-22",
   "lga_sample_points": 80,
   "history_failures": [],
   "forecast_failures": [],
