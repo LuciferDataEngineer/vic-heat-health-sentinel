@@ -1,12 +1,12 @@
 {
   "project": "vic-heat-health-sentinel",
-  "access_date": "2026-11-13",
-  "access_time_melbourne": "2026-11-13T12:20:23+1100",
+  "access_date": "2026-11-14",
+  "access_time_melbourne": "2026-11-14T11:58:04+1100",
   "notes": {
     "history_start": "2016-01-01",
     "history_end": "2026-10-30",
-    "forecast_start": "2026-11-13",
-    "forecast_end": "2026-11-28",
+    "forecast_start": "2026-11-14",
+    "forecast_end": "2026-11-29",
     "lga_sample_points": 80,
     "history_failures": [],
     "forecast_failures": [],
@@ -43,14 +43,14 @@
     {
       "path": "data/snapshot/forecast_daily.parquet",
       "rows": 1280,
-      "bytes": 11730,
-      "sha256": "c1692da2b17abf6b7eadf11c5a526a530a554836ebc78eecd9c963957809700f"
+      "bytes": 11002,
+      "sha256": "049ff0f9a1773f898e130c867c37923a85ef1ac65d277304139d0359d8af1d12"
     },
     {
       "path": "data/snapshot/air_quality_daily.parquet",
       "rows": 400,
-      "bytes": 5670,
-      "sha256": "73d03e92c5edc9dc4080907f9063d3d81d8d1920d3ba110c200de7e6c1963be0"
+      "bytes": 5717,
+      "sha256": "2efb76367657b0407de5888f6df2fac2a387ef8f1f526868bd6372768479d213"
     },
     {
       "path": "data/snapshot/history_meta.json",
@@ -62,7 +62,7 @@
       "path": "data/snapshot/run_notes.json",
       "rows": 1,
       "bytes": 456,
-      "sha256": "80b55c32ef5f6ec96a9f68e3131585b15f40f44d29681f1e3fa8d8fd16228ebe"
+      "sha256": "8dc4fdd874484986fd2a002b2d2898b7acb4571395f2d336f697b4fd87d706a4"
     }
   ],
   "sources": [
@@ -71,8 +71,8 @@
       "publisher": "Open-Meteo",
       "url": "https://api.open-meteo.com/v1/forecast",
       "licence": "CC BY 4.0",
-      "coverage": "Daily temperature at one interior point in each Victorian LGA, 2026-11-13 to 2026-11-28",
-      "access_date": "2026-11-13",
+      "coverage": "Daily temperature at one interior point in each Victorian LGA, 2026-11-14 to 2026-11-29",
+      "access_date": "2026-11-14",
       "free": true,
       "notes": "No API key. Upstream weather models via Open-Meteo."
     },
@@ -82,7 +82,7 @@
       "url": "https://archive-api.open-meteo.com/v1/archive",
       "licence": "CC BY 4.0",
       "coverage": "Daily temperature, 2016-01-01 to 2026-10-30, one interior point per Victorian LGA",
-      "access_date": "2026-11-13",
+      "access_date": "2026-11-14",
       "free": true,
       "notes": "ERA5 reanalysis lags the present by several days, so the archive end date is the last day the API returned."
     },
@@ -92,7 +92,7 @@
       "url": "https://air-quality-api.open-meteo.com/v1/air-quality",
       "licence": "CC BY 4.0",
       "coverage": "Hourly PM2.5 and ozone, aggregated to local days, next 5 days, one point per Victorian LGA",
-      "access_date": "2026-11-13",
+      "access_date": "2026-11-14",
       "free": true,
       "notes": "Smoke is not a separate field. Fine-particle pollution (PM2.5) is the smoke proxy. EPA Victoria's keyed API is not used."
     },
@@ -102,7 +102,7 @@
       "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/LGA/MapServer",
       "licence": "CC BY 4.0",
       "coverage": "Victorian LGA boundaries, generalised for the map, GDA2020 via Web Mercator query returned in WGS84",
-      "access_date": "2026-11-13",
+      "access_date": "2026-11-14",
       "free": true,
       "notes": "Geometry simplified with maxAllowableOffset 0.008 degrees for the dashboard."
     },
@@ -112,7 +112,7 @@
       "url": "https://geo.abs.gov.au/arcgis/rest/services/Hosted/ABS_2021_Census_G01_LGA/FeatureServer",
       "licence": "CC BY 4.0",
       "coverage": "Usual-resident population, children aged 0-4, and ages 65-74, 75-84 and 85+ by Victorian LGA",
-      "access_date": "2026-11-13",
+      "access_date": "2026-11-14",
       "free": true,
       "notes": "Small random adjustments are applied by the ABS to protect privacy."
     },
@@ -122,7 +122,7 @@
       "url": "https://geo.abs.gov.au/arcgis/rest/services/Hosted/ABS_Income_including_government_allowances_by_2021_LGA/FeatureServer",
       "licence": "CC BY 4.0",
       "coverage": "Median equivalised household income and the share of households under $500 a week, Victorian LGAs",
-      "access_date": "2026-11-13",
+      "access_date": "2026-11-14",
       "free": true,
       "notes": "Equivalised total household income, Census 2021."
     },
@@ -132,7 +132,7 @@
       "url": "https://geo.abs.gov.au/arcgis/rest/services/Hosted/ABS_Family_and_community_by_2021_LGA_Nov_2023/FeatureServer",
       "licence": "CC BY 4.0",
       "coverage": "Lone-person households and total households by Victorian LGA",
-      "access_date": "2026-11-13",
+      "access_date": "2026-11-14",
       "free": true,
       "notes": "Table field hhtype_22021 is lone-person households."
     },
@@ -142,7 +142,7 @@
       "url": "https://www.health.vic.gov.au/environmental-health/heat-health-warning",
       "licence": "Public government page, cited; not a bulk download",
       "coverage": "District thresholds 30, 32 and 34\u00b0C and the council-to-district list",
-      "access_date": "2026-11-13",
+      "access_date": "2026-11-14",
       "free": true,
       "notes": "Used only as the published temperature cut-offs. No health-outcome microdata."
     }
